@@ -51,6 +51,28 @@ section{
 strong{
     font-weight: var(--fw-bold);
 }
+:focus{
+    outline: 2px solid var(--clr-accent);
+    outline-offset: 2px;
+}
+
+/* buttons */
+.btn{
+    display: inline-block;
+    padding: .5em 2.5em;
+    background: var(--clr-accent);
+    color: var(--clr-dark);
+    text-decoration: none;
+    cursor: pointer;
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: var(--fw-bold);
+    transition: transform .2s;
+}
+.btn:hover{
+    transform: scale(1.1);
+}
 
 /* typography */
 h1,h2,h3{
@@ -82,6 +104,7 @@ h3{
     background: var(--clr-accent);
     padding: .1em 1em;
     font-family: var(--ff-secondary);
+    font-weight: var(--fw-bold);
     margin-bottom: 1em;
 }
 
@@ -124,13 +147,44 @@ intro{
 }
 
 /* services */
+.my-services{
+    background-color: black;
+    background-image: url(../img/services-bg.webp);
+    background-size: cover;
+    color: var(--clr-light);
+    text-align: center;
+}
+.section-title-services{
+    color: var(--clr-accent);
+    position: relative;
+}
+.section-title-services::after{
+    content: '';
+    display: block;
+    width: 3em;
+    height: 1px;
+    margin: .5em auto 1em;
+    background: currentColor;
+    opacity: 1;
+}
+.services{
+    margin-bottom: 4em;
+}
+.service{
+    max-width: 600px;
+    margin: 30px auto;
+}
 
-
-
-
-
-
-
-
+@media (min-width: 800px){
+    .services{
+        display: flex;
+        max-width: 1000px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .service + .service{
+        margin-left: 2em;
+    }
+}
 
 
