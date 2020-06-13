@@ -7,6 +7,8 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+/* custom properties */
 :root{
     --ff-primary: Georgia,serif;
     --ff-secondary: Tahoma,sans-serif;
@@ -15,18 +17,19 @@
     --clr-light: #fff;
     --clr-dark: #303030;
     --clr-accent: #16E0BD;
-    --fs-h1: 3rem;
-    --fs-h2: 2.25rem;
-    --fs-h3: 1.25rem;
-    --fs-body: 1rem;
+    --fs-h1: 3.5rem;
+    --fs-h2: 2.5rem;
+    --fs-h3: 1.5rem;
+    --fs-body: 1.2rem;
+    --bs: .25em .25em .75em rgba(0, 0, 0, .5), .12em .12em .25em rgba(0, 0, 0, .25);
 }
 
 @media (min-width: 800px){
     :root{
         --fs-h1: 4.5rem;
-        --fs-h2: 3.75rem;
-        --fs-h3: 1.5rem;
-        --fs-body: 1.2rem;
+        --fs-h2: 3.5rem;
+        --fs-h3: 2rem;
+        --fs-body: 1.5rem;
     }
 }
 
@@ -77,6 +80,7 @@ h3{
 .section-subtitle-intro,
 .section-subtitle-about{
     background: var(--clr-accent);
+    padding: .1em 1em;
     font-family: var(--ff-secondary);
     margin-bottom: 1em;
 }
@@ -88,6 +92,9 @@ nav{
 /* intro */
 intro{
     position: relative;
+}
+.intro-img{
+    box-shadow: var(--bs);
 }
 
 @media (min-width: 600px){
@@ -102,6 +109,8 @@ intro{
     .intro-img{
         grid-area: img;
         min-width: 250px;
+        position: relative;
+        z-index: 2;
     }
     .section-subtitle-intro{
         align-self: start;
@@ -109,10 +118,13 @@ intro{
         grid-row: 2;
         text-align: right;
         position: relative;
-        left: -1.5em;
-        width: calc(100% + 1.5em);
+        left: -1em;
+        width: calc(100% + 1em);
     }
 }
+
+/* services */
+
 
 
 
