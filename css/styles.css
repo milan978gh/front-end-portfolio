@@ -107,6 +107,11 @@ h3{
     font-weight: var(--fw-bold);
     margin-bottom: 1em;
 }
+.section-subtitle-work{
+    color: var(--clr-accent);
+    font-weight: var(--fw-bold);
+    margin-bottom: 2em;
+}
 
 /* header */
 .nav{
@@ -222,3 +227,28 @@ h3{
         z-index: 2;
     }
 }
+
+/* work */
+.work{
+    background-color: var(--clr-dark);
+    color: var(--clr-light);
+    text-align: center;
+}
+.portfolio{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    max-width: 1100px;
+    margin: 0 auto;
+}
+.portfolio-item{
+    /* background: var(--clr-accent); */
+}
+.portfolio-img{
+    transition: transform .5s cubic-bezier(0.5, 0, .5, 1)
+    /*, opacity .25s linear*/;
+}
+.portfolio-img:hover{
+    transform: scale(1.2);
+    /* opacity: .75; */
+}
+
