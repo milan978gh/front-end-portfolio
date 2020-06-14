@@ -29,7 +29,7 @@
         --fs-h1: 4.5rem;
         --fs-h2: 3.5rem;
         --fs-h3: 2rem;
-        --fs-body: 1.5rem;
+        --fs-body: 1.2rem;
     }
 }
 
@@ -102,19 +102,19 @@ h3{
 .section-subtitle-intro,
 .section-subtitle-about{
     background: var(--clr-accent);
-    padding: .1em 1em;
+    padding: 0 .6em ;
     font-family: var(--ff-secondary);
     font-weight: var(--fw-bold);
     margin-bottom: 1em;
 }
 
 /* header */
-nav{
+.nav{
     display: none;
 }
 
 /* intro */
-intro{
+.intro{
     position: relative;
 }
 .intro-img{
@@ -132,7 +132,7 @@ intro{
     }
     .intro-img{
         grid-area: img;
-        min-width: 250px;
+        min-width: 300px;
         position: relative;
         z-index: 2;
     }
@@ -189,4 +189,36 @@ intro{
 }
 
 /* about */
+.about{
+    max-width: 1000px;
+    margin: 0 auto;
+}
+.about-img{
+    box-shadow: var(--bs);
+}
 
+@media (min-width:600px){
+    .about{
+        display: grid;
+        grid-template-columns: 1fr 250px;
+        grid-template-areas: "title img" "subtitle img" "text img";
+        grid-column-gap: 2em;
+    }
+    .section-title-about{
+        grid-area: title;
+    }
+    .section-subtitle-about{
+        grid-column: 1/-1;
+        grid-row: 2;
+        position: relative;
+        left: -1em;
+        width: calc(100% + 2em);
+        padding-left: 1em;
+        padding-right: calc(250px + 4em);
+    }
+    .about-img{
+        grid-area: img;
+        position: relative;
+        z-index: 2;
+    }
+}
